@@ -1,0 +1,274 @@
+{
+  "invocation": "endangered species facts",
+  "intents": [
+    {
+      "name": "RandomFactIntent",
+      "phrases": [
+        "a random fact",
+        "tell me a random fact",
+        "a fact",
+        "an endangered species fact",
+        "tell me a fact",
+        "tell me an endangered species fact",
+        "give me an endangered species fact",
+        "give me an endangered fact",
+        "tell me trivia",
+        "tell me an endangered species trivia",
+        "give me trivia",
+        "give me an endangered species trivia",
+        "give me some information",
+        "give me some endangered species information",
+        "tell me something",
+        "give me something"
+      ]
+    },
+    {
+      "name": "SpeciesCountIntent",
+      "phrases": [
+        "the count of endangered species",
+        "the count of species that are endangered",
+        "the count of species endangered",
+        "the number of species that are endangered",
+        "the number of species endangered",
+        "the number of endangered species",
+        "how many endangered species are there",
+        "what number of species are endangered",
+        "how many species are currently endangered",
+        "how many species are endangered"
+      ]
+    },
+    {
+      "name": "SpeciesFactIntent",
+      "phrases": ["get me a {species} fact", "tell me a {species} fact"],
+      "inputs": [
+        {
+          "name": "species",
+          "type": "speciesInputType"
+        }
+      ]
+    },
+    {
+      "name": "HelpIntent",
+      "phrases": [
+        "help",
+        "help me",
+        "help me please",
+        "help me out",
+        "assistance",
+        "need assistance",
+        "i need assistance",
+        "assistance please"
+      ]
+    },
+    {
+      "name": "YesIntent",
+      "phrases": [
+        "yes",
+        "sure",
+        "of course",
+        "yes please",
+        "okay",
+        "yeah",
+        "sure thing",
+        "absolutely",
+        "another one",
+        "next",
+        "next one",
+        "ready",
+        "i am ready"
+      ]
+    },
+    {
+      "name": "NoIntent",
+      "phrases": ["no", "no thanks", "no thank you", "nope", "no more"]
+    }
+  ],
+  "inputTypes": [
+    {
+      "name": "speciesInputType",
+      "values": [
+        {
+          "value": "amur leopard"
+        },
+        {
+          "value": "black rhino"
+        },
+        {
+          "value": "bornean orangutan"
+        },
+        {
+          "value": "cross river gorilla"
+        },
+        {
+          "value": "eastern lowland gorilla"
+        },
+        {
+          "value": "hawksbill turtle"
+        },
+        {
+          "value": "javan rhino"
+        },
+        {
+          "value": "malayan tiger"
+        },
+        {
+          "value": "orangutan"
+        },
+        {
+          "value": "saola"
+        },
+        {
+          "value": "south china tiger"
+        },
+        {
+          "value": "sumatran elephant"
+        },
+        {
+          "value": "sumatran orangutan"
+        },
+        {
+          "value": "sumatran rhino"
+        },
+        {
+          "value": "sumatran tiger"
+        },
+        {
+          "value": "vaquita"
+        },
+        {
+          "value": "western lowland gorilla"
+        },
+        {
+          "value": "yangtze finless porpoise"
+        },
+        {
+          "value": "african wild dog"
+        },
+        {
+          "value": "amur tiger"
+        },
+        {
+          "value": "asian elephant"
+        },
+        {
+          "value": "bengal tiger"
+        },
+        {
+          "value": "black footed ferret"
+        },
+        {
+          "value": "blue whale"
+        },
+        {
+          "value": "bluefin tuna"
+        },
+        {
+          "value": "bonobo"
+        },
+        {
+          "value": "borneo pygmy elephant"
+        },
+        {
+          "value": "chimpanzee"
+        },
+        {
+          "value": "fin whale"
+        },
+        {
+          "value": "galapagos penguin"
+        },
+        {
+          "value": "ganges river dolphin"
+        },
+        {
+          "value": "green sea turtle"
+        },
+        {
+          "value": "hector's dolphin"
+        },
+        {
+          "value": "humphead wrasse"
+        },
+        {
+          "value": "indian elephant"
+        },
+        {
+          "value": "indochinese tiger"
+        },
+        {
+          "value": "indus river dolphin"
+        },
+        {
+          "value": "irrawaddy dolphin"
+        },
+        {
+          "value": "mountain gorilla"
+        },
+        {
+          "value": "north atlantic right whale"
+        },
+        {
+          "value": "red panda"
+        },
+        {
+          "value": "sea lion"
+        },
+        {
+          "value": "sei whale"
+        },
+        {
+          "value": "sri lankan elephant"
+        },
+        {
+          "value": "tiger"
+        },
+        {
+          "value": "whale"
+        },
+        {
+          "value": "whale shark"
+        }
+      ]
+    }
+  ],
+  "alexa": {
+    "interactionModel": {
+      "languageModel": {
+        "intents": [
+          {
+            "name": "AMAZON.CancelIntent",
+            "samples": ["cancel"]
+          },
+          {
+            "name": "AMAZON.HelpIntent",
+            "samples": ["help"]
+          },
+          {
+            "name": "AMAZON.StopIntent",
+            "samples": ["exit", "stop"]
+          }
+        ]
+      }
+    }
+  },
+  "dialogflow": {
+    "intents": [
+      {
+        "name": "Default Fallback Intent",
+        "auto": true,
+        "webhookUsed": true,
+        "fallbackIntent": true
+      },
+      {
+        "name": "Default Welcome Intent",
+        "auto": true,
+        "webhookUsed": true,
+        "events": [
+          {
+            "name": "WELCOME"
+          }
+        ]
+      }
+    ]
+  }
+}
