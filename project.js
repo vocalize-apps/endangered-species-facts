@@ -3,12 +3,35 @@
 // ------------------------------------------------------------------
 
 module.exports = {
-    alexaSkill: {
-       nlu: 'alexa',
+  alexaSkill: {
+    nlu: 'alexa'
+  },
+  googleAction: {
+    nlu: 'dialogflow'
+  },
+  stages: {
+    local: {
+      endpoint: '${JOVO_WEBHOOK_URL}'
     },
-    googleAction: {
-       nlu: 'dialogflow',
+    dev: {
+      alexaSkill: {
+        endpoint: process.env.DEV_ENDPOINT
+      },
+      googleAction: {
+        dialogflow: {
+          endpoint: process.env.API_DEV
+        }
+      }
     },
-    endpoint: '${JOVO_WEBHOOK_URL}',
+    prod: {
+      alexaSkill: {
+        endpoint: process.env.PROD_ENDPOINT
+      },
+      googleAction: {
+        dialogflow: {
+          endpoint: process.env.API_PROD
+        }
+      }
+    }
+  }
 };
- 
