@@ -14,6 +14,9 @@ module.exports = {
     this.$speech.addText(`Here's your fact: ${fact} ${reprompt}`);
     this.$reprompt.addText(reprompt);
 
-    this.ask(this.$speech, this.$reprompt);
+    this.showSimpleCard(this.$session.$data.species, fact).ask(
+      this.$speech,
+      this.$reprompt
+    );
   }
 };
